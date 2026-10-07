@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksud Belim | Senior PHP & Node.js Developer (10+ Years Experience)</title>
+    <meta name="description" content="Portfolio of Maksud Belim, Senior Web Developer with 10+ years experience in PHP, Laravel, CodeIgniter, WordPress Theme & Plugin Development, WooCommerce, Yii, Node.js, and AWS (EC2, RDS, CloudWatch).">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased transition-colors duration-300">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800/80 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white font-mono font-bold text-xl shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+                    MB
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-lg leading-none tracking-tight text-slate-900 dark:text-white">Maksud Belim</span>
+                    <span class="text-xs text-indigo-600 dark:text-indigo-400 font-mono font-medium">Senior Web Developer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600 dark:text-slate-300">
+                <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions (Theme Toggle & CTA) -->
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-lg"></i>
+                </button>
+                
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-semibold text-sm text-white bg-indigo-600 hover:bg-indigo-700 shadow-lg shadow-indigo-600/20 transition-all hover:scale-[1.02]">
+                    Get In Touch
+                </a>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-btn" aria-label="Open Navigation Menu" class="md:hidden p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 dark:bg-slate-950/95 border-b border-slate-200 dark:border-slate-800 px-6 py-6 transition-all">
+            <nav class="flex flex-col gap-4 text-base font-semibold text-slate-700 dark:text-slate-200">
+                <a href="#about" class="mobile-nav-link hover:text-indigo-600 dark:hover:text-indigo-400">About</a>
+                <a href="#skills" class="mobile-nav-link hover:text-indigo-600 dark:hover:text-indigo-400">Skills</a>
+                <a href="#experience" class="mobile-nav-link hover:text-indigo-600 dark:hover:text-indigo-400">Experience</a>
+                <a href="#projects" class="mobile-nav-link hover:text-indigo-600 dark:hover:text-indigo-400">Projects</a>
+                <a href="#contact" class="mobile-nav-link hover:text-indigo-600 dark:hover:text-indigo-400">Contact</a>
+                <a href="#contact" class="mt-2 text-center py-3 rounded-xl text-white bg-indigo-600 font-bold">Get In Touch</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Ambient background lighting -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/60 text-indigo-700 dark:text-indigo-300 text-xs font-semibold mb-6">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Senior Web Developer • 10+ Years Experience
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] mb-6">
+                        Hi, I'm <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">Maksud Belim</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-8 max-w-2xl">
+                        A passionate <span class="font-bold text-slate-900 dark:text-white">Senior Web Developer</span> with over a decade of hands-on experience architecting enterprise portals & field GPS tracking CRMs (handling <strong class="text-slate-900 dark:text-white">23,000+ users & 160,000+ projects</strong>) in <strong>PHP, Laravel, CodeIgniter, WordPress, WooCommerce, and Node.js</strong>, backed by <strong>AWS Cloud (EC2, RDS, CloudWatch)</strong>.
+                    </p>
+
+                    <!-- Skill Badges Pill Bar -->
+                    <div class="flex flex-wrap gap-2.5 mb-10">
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium flex items-center gap-1.5">
+                            <i class="fa-brands fa-php text-indigo-500"></i> PHP 8.x
+                        </span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium flex items-center gap-1.5">
+                            <i class="fa-brands fa-laravel text-red-500"></i> Laravel
+                        </span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium flex items-center gap-1.5">
+                            <i class="fa-solid fa-fire text-orange-500"></i> CodeIgniter & Yii
+                        </span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium flex items-center gap-1.5">
+                            <i class="fa-brands fa-wordpress text-sky-500"></i> WP & WooCommerce
+                        </span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium flex items-center gap-1.5">
+                            <i class="fa-brands fa-node-js text-emerald-500"></i> Node.js
+                        </span>
+                        <span class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-mono font-medium flex items-center gap-1.5">
+                            <i class="fa-brands fa-aws text-amber-500"></i> AWS Cloud
+                        </span>
+                    </div>
+
+                    <!-- Call to action buttons -->
+                    <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+                        <a href="#projects" class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-xl shadow-indigo-600/25 transition-all text-center hover:scale-[1.02]">
+                            Explore My Work
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all text-center">
+                            Contact Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual Hero Code Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl p-6 font-mono text-sm overflow-hidden group">
+                        <!-- Top Mac Window Buttons -->
+                        <div class="flex items-center gap-2 mb-4 pb-3 border-b border-slate-800">
+                            <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                            <span class="ml-auto text-xs text-slate-500">MaksudBelim.php</span>
+                        </div>
+
+                        <div class="space-y-2 text-slate-300 leading-relaxed text-xs sm:text-sm">
+                            <div><span class="text-purple-400">class</span> <span class="text-amber-300">MaksudBelim</span> {</div>
+                            <div class="pl-4"><span class="text-purple-400">public string</span> <span class="text-indigo-400">$currentRole</span> = <span class="text-emerald-400">'Senior PHP Developer @ Igen Technology'</span>;</div>
+                            <div class="pl-4"><span class="text-purple-400">public string</span> <span class="text-indigo-400">$experience</span> = <span class="text-emerald-400">'Sep 2015 – Present (10+ Yrs)'</span>;</div>
+                            <div class="pl-4"><span class="text-purple-400">public array</span> <span class="text-indigo-400">$keyEnterpriseSystems</span> = [</div>
+                            <div class="pl-8 text-emerald-300">'RoyaleToucheRAF' => '23k+ Architects, 163k+ Projects',</div>
+                            <div class="pl-8 text-emerald-300">'RoyaleToucheSalesCRM' => '26k+ Field Visits, GPS & KM Engine',</div>
+                            <div class="pl-8 text-emerald-300">'SEOContentHero' => 'Hybrid WP + CodeIgniter Engine',</div>
+                            <div class="pl-8 text-emerald-300">'EverydayKitchen' => 'WooCommerce Product Catalog',</div>
+                            <div class="pl-4">];</div>
+                            <br>
+                            <div class="pl-4"><span class="text-purple-400">public function</span> <span class="text-blue-400">buildEnterpriseSystem</span>(): EnterpriseApp {</div>
+                            <div class="pl-8"><span class="text-purple-400">return</span> <span class="text-purple-400">new</span> EnterpriseApp(scale: <span class="text-emerald-400">'High Throughput & Cloud Scaled'</span>);</div>
+                            <div class="pl-4">}</div>
+                            <div>}</div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                            <span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-emerald-400"></i> Enterprise Certified</span>
+                            <span class="text-indigo-400 font-semibold">AWS + PHP + Node</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="border-y border-slate-200 dark:border-slate-800/80 bg-white/50 dark:bg-slate-900/50 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-1">10+</div>
+                    <div class="text-xs md:text-sm font-semibold text-slate-600 dark:text-slate-400">Years Industry Experience</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-1">23k+</div>
+                    <div class="text-xs md:text-sm font-semibold text-slate-600 dark:text-slate-400">Architects Onboarded</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-1">26k+</div>
+                    <div class="text-xs md:text-sm font-semibold text-slate-600 dark:text-slate-400">GPS Field Visits Logged</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-1">AWS</div>
+                    <div class="text-xs md:text-sm font-semibold text-slate-600 dark:text-slate-400">EC2, RDS & CloudWatch</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">About Me</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">10+ Years Building High-Performance Web Applications</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-7 space-y-6 text-slate-600 dark:text-slate-300 leading-relaxed text-base">
+                    <p>
+                        My web development journey began in <strong>September 2015</strong> at <strong>Stridedge Technology</strong>, working with <strong>PHP, WordPress, and the Yii framework</strong>. Over the years, I deepened my technical acumen in object-oriented programming, custom database architecture, and CMS customization.
+                    </p>
+                    <p>
+                        Since <strong>March 2017</strong>, I have served as a <strong>Senior PHP Developer</strong> at <strong>Igen Technology</strong>. Here, I architect massive enterprise web platforms (such as the <em>Royale Touché Architect Forum</em> processing <strong>23,000+ architects and 163,000+ projects</strong>, and the <em>Royale Touché Sales Team CRM</em> processing <strong>26,000+ GPS field visits</strong>), multi-tier commission engines, and hybrid applications using <strong>Laravel, CodeIgniter, custom WordPress plugins/themes, WooCommerce, and Node.js</strong>.
+                    </p>
+                    <p>
+                        Beyond backend logic, I engineer high-throughput database systems in <strong>MySQL</strong> and deploy cloud infrastructure on <strong>Amazon Web Services (AWS EC2, RDS, and CloudWatch)</strong> while maintaining disciplined Git workflows on GitHub.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <i class="fa-brands fa-laravel text-2xl text-red-500 mb-3"></i>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-1">Laravel & CodeIgniter</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Enterprise portals, GPS tracking CRMs, commission algorithms, RBAC, DB indexing.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <i class="fa-brands fa-wordpress text-2xl text-sky-500 mb-3"></i>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-1">WordPress & WooCommerce</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Custom themes, WooCommerce product catalogs, order sync engines, custom plugins.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <i class="fa-brands fa-node-js text-2xl text-emerald-500 mb-3"></i>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-1">Node.js & JavaScript</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Asynchronous processing, REST services, jQuery, AJAX client integrations.</p>
+                    </div>
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <i class="fa-brands fa-aws text-2xl text-amber-500 mb-3"></i>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-1">AWS Cloud Infrastructure</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">EC2 server deployment, managed RDS databases, CloudWatch monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Technical Arsenal</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Skills & Technologies</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-4 text-sm sm:text-base">Core technologies I use daily to build, optimize, and deploy applications.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: PHP Frameworks -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-brands fa-php"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">PHP & Frameworks</h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">PHP (Core & OOP)</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Laravel</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">CodeIgniter</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Senior</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Yii Framework</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-mono">Experienced</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: WordPress Engineering -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-brands fa-wordpress"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">WordPress & WooCommerce</h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">WordPress CMS</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Custom Theme Development</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Custom Plugin Development</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">WooCommerce Hooks</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Node.js & JavaScript -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-brands fa-node-js"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Node.js & Frontend JS</h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Node.js</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-mono">Proficient</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">JavaScript (ES6+)</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Senior</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">jQuery & AJAX</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">HTML5 & CSS3</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: AWS Cloud -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-brands fa-aws"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">AWS Cloud & DevOps</h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">AWS EC2 Instance Setup</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Senior</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">AWS RDS (MySQL)</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Senior</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">AWS CloudWatch Logs</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-mono">Proficient</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Git & GitHub Workflows</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 5: Database & Querying -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Database Management</h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">MySQL Architecture</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">GPS Lat/Long & KM Calc Engine</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Query Optimization & Scale</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Senior</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Commission & Points Logic</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 6: Application Engineering -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Engineering Practices</h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Field CRM & GPS Tracking</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Multi-Tier Hierarchy (3-Tier)</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Achievement & Badges Engine</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 font-mono">Expert</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Role-Based Access (RBAC)</span>
+                            <span class="text-xs px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-mono">Senior</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Work Experience</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Professional Career Path</h2>
+            </div>
+
+            <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-4 md:ml-6 space-y-12">
+                <!-- Timeline Item 1: Igen Technology -->
+                <div class="relative pl-8 md:pl-10">
+                    <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white dark:ring-slate-950"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior PHP Developer</h3>
+                        <span class="text-xs font-mono font-semibold px-3.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 w-fit">March 2017 – Present</span>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 font-semibold mb-3">Igen Technology • Full-Time</p>
+                    <ul class="list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-2">
+                        <li>Lead backend web architect managing enterprise systems like <strong>Royale Touché Architect Forum (23k+ Architects, 163k+ Projects)</strong> and <strong>Royale Touché Sales Team & Field Tracking CRM (26k+ Visits, GPS Lat/Long & KM Engine)</strong>.</li>
+                        <li>Architect 3-tier reporting structures (Salesperson &rarr; Marketing Head &rarr; Distributor), field visit assigners, distance tracking, and dynamic badge incentives.</li>
+                        <li>Develop custom <strong>WordPress themes, WooCommerce order platforms, and CodeIgniter custom admin panels</strong> with automated multi-role workflows.</li>
+                        <li>Build high-concurrency API endpoints and backend microservices using <strong>Node.js</strong>.</li>
+                        <li>Deploy and maintain server instances and database clusters on <strong>AWS EC2, RDS, and CloudWatch</strong>.</li>
+                    </ul>
+                </div>
+
+                <!-- Timeline Item 2: Stridedge Technology -->
+                <div class="relative pl-8 md:pl-10">
+                    <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">PHP Developer</h3>
+                        <span class="text-xs font-mono font-semibold px-3.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 w-fit">September 2015 – February 2017</span>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 font-semibold mb-3">Stridedge Technology • Full-Time</p>
+                    <ul class="list-disc list-inside text-sm text-slate-600 dark:text-slate-300 space-y-2">
+                        <li>Developed core PHP web applications and database-driven dynamic websites using <strong>MySQL</strong>.</li>
+                        <li>Built custom WordPress websites, custom page templates, and widget modules.</li>
+                        <li>Engineered enterprise web portals using the <strong>Yii Framework</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200 dark:border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Portfolio</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Featured Projects</h2>
+                </div>
+
+                <!-- Project Category Filters -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="project-filters">
+                    <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-indigo-600 text-white">All</button>
+                    <button data-filter="enterprise" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Enterprise & CRM</button>
+                    <button data-filter="wordpress" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">WordPress & WooCommerce</button>
+                    <button data-filter="codeigniter" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">CodeIgniter & Hybrid</button>
+                </div>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+
+                <!-- REAL PROJECT 1: Royale Touché Sales Team & Field Tracking CRM -->
+                <div class="project-card group rounded-2xl bg-white dark:bg-slate-900 border border-emerald-500/40 dark:border-emerald-500/30 overflow-hidden shadow-2xl transition-all md:col-span-2 lg:col-span-3" data-category="enterprise laravel aws">
+                    <div class="grid lg:grid-cols-12 items-center bg-slate-950">
+                        <!-- Left Admin Dashboard Image -->
+                        <div class="lg:col-span-7 h-72 lg:h-[420px] overflow-hidden relative group p-2 bg-slate-900">
+                            <img src="assets/images/royale-touche-sales-crm.png" alt="Royale Touché Sales Team CRM Dashboard" class="w-full h-full object-cover object-top rounded-xl group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full bg-emerald-500 text-slate-950 text-xs font-mono font-extrabold shadow-xl">Field Tracking & Sales CRM</span>
+                        </div>
+                        
+                        <!-- Right Description & Multi-Tier Architecture -->
+                        <div class="lg:col-span-5 p-6 lg:p-8 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-bold uppercase tracking-wider text-emerald-400 mb-1">Royale Touché Luxury Laminates</div>
+                                <h3 class="text-2xl font-extrabold text-white mb-3">Sales Team & Field Tracking CRM</h3>
+                                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                                    Enterprise mobile-integrated field operations & sales tracking platform managing over <strong class="text-emerald-400">1,000+ active sales executives</strong> and <strong class="text-emerald-400">26,000+ field visits</strong>:
+                                </p>
+                                <ul class="list-disc list-inside text-xs text-slate-300 space-y-1.5 mb-6">
+                                    <li><strong>GPS Lat/Long & Geofenced Client Lookup</strong>: Sales representatives register via mobile app to view nearest client outlets, create visits, or execute assigned client visits.</li>
+                                    <li><strong>Real-Time Distance (KM) Tracking Engine</strong>: Continuously captures live latitude & longitude coordinates to calculate, verify, and store exact travel distance in kilometers (KM).</li>
+                                    <li><strong>3-Tier Management Tree</strong>: Hierarchical structure (Sales Person &rarr; Marketing Head &rarr; Distributor) tracking daily average visits, visit frequency, and RAF app adoption among architects.</li>
+                                    <li><strong>Automated Inactivity Alerts</strong>: Identifies and highlights clients unvisited in 45+ days for re-assignment.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-emerald-300 text-xs font-mono border border-slate-700">PHP 8.x</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-emerald-300 text-xs font-mono border border-slate-700">GPS & KM Engine</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-emerald-300 text-xs font-mono border border-slate-700">3-Tier Hierarchy</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-emerald-300 text-xs font-mono border border-slate-700">Enterprise MySQL</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-emerald-300 text-xs font-mono border border-slate-700">AWS Cloud</span>
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-semibold pt-3 border-t border-slate-800">
+                                    <span class="text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-emerald-400"></i> 26k+ GPS Logged Visits</span>
+                                    <a href="#contact" class="text-emerald-400 hover:text-emerald-300 hover:underline">Discuss Field CRM &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REAL PROJECT 2: Royale Touché Luxury Laminates — Royale Architect Forum (RAF) -->
+                <div class="project-card group rounded-2xl bg-white dark:bg-slate-900 border border-amber-500/40 dark:border-amber-500/30 overflow-hidden shadow-2xl transition-all md:col-span-2 lg:col-span-3" data-category="enterprise laravel aws">
+                    <div class="grid lg:grid-cols-12 items-center bg-slate-950">
+                        <!-- Left Admin Dashboard Image -->
+                        <div class="lg:col-span-7 h-72 lg:h-[420px] overflow-hidden relative group p-2 bg-slate-900">
+                            <img src="assets/images/royale-touche-raf.png" alt="Royale Touché Architect Forum Admin Portal" class="w-full h-full object-cover object-top rounded-xl group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 left-4 px-3.5 py-1 rounded-full bg-amber-500 text-slate-950 text-xs font-mono font-extrabold shadow-xl">Flagship Enterprise System</span>
+                        </div>
+                        
+                        <!-- Right Description & Multi-Tier Architecture -->
+                        <div class="lg:col-span-5 p-6 lg:p-8 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-1">Royale Touché Luxury Laminates</div>
+                                <h3 class="text-2xl font-extrabold text-white mb-3">Royale Architect Forum (RAF) Portal</h3>
+                                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                                    Architected and managed an enterprise portal serving over <strong class="text-amber-400">23,000+ registered architects</strong> and <strong class="text-amber-400">163,000+ submitted projects</strong>:
+                                </p>
+                                <ul class="list-disc list-inside text-xs text-slate-300 space-y-1.5 mb-6">
+                                    <li><strong>Multi-Company Product Mapping</strong>: Architects log project sheets across 5 brand divisions (Laminates, Plywood, Wooden, Acrylic, Veneer) with design-code points & monetary valuations.</li>
+                                    <li><strong>Reach vs Non-Reach Architect Tiers</strong>: 
+                                        <em>Reach Architects</em> receive assigned commission slabs (8%, 10%, 12%) paid out by Admin. 
+                                        <em>Non-Reach Architects</em> earn reward points redeemable for cash or gifts upon project approval.</li>
+                                    <li><strong>Distributor Revenue Sharing Engine</strong>: Automated commission contribution splits between the parent company and regional distributors based on configured percentage rules.</li>
+                                    <li><strong>Dynamic Badges & Achievement Bonuses</strong>: Rule engine awarding badges & financial bonuses when cross-category project thresholds are met (e.g. 50+ sheets across 4 verticals).</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-amber-300 text-xs font-mono border border-slate-700">PHP 8.x</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-amber-300 text-xs font-mono border border-slate-700">Enterprise MySQL</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-amber-300 text-xs font-mono border border-slate-700">Commission Engine</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-amber-300 text-xs font-mono border border-slate-700">Gamification Badges</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-amber-300 text-xs font-mono border border-slate-700">AWS EC2 & RDS</span>
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-semibold pt-3 border-t border-slate-800">
+                                    <span class="text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-users text-amber-400"></i> 23k+ Active Architects</span>
+                                    <a href="#contact" class="text-amber-400 hover:text-amber-300 hover:underline">Discuss Enterprise Architecture &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REAL PROJECT 3: SEO Content Hero (WP WooCommerce + CodeIgniter Admin Engine) -->
+                <div class="project-card group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all md:col-span-2 lg:col-span-3" data-category="wordpress codeigniter">
+                    <div class="grid lg:grid-cols-12 items-center bg-slate-900">
+                        <!-- Dual Screenshots Showcase -->
+                        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-2 p-3 bg-slate-950/80">
+                            <div class="h-64 sm:h-80 overflow-hidden relative group rounded-xl border border-slate-800">
+                                <img src="assets/images/seocontenthero-wp.png" alt="SEO Content Hero WordPress Frontend" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-sky-600/90 text-white text-xs font-mono font-bold shadow-md">WordPress Storefront</span>
+                            </div>
+                            <div class="h-64 sm:h-80 overflow-hidden relative group rounded-xl border border-slate-800">
+                                <img src="assets/images/seocontenthero-ci-admin.png" alt="RPM Traffik CodeIgniter Custom Admin Panel" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-amber-600/90 text-white text-xs font-mono font-bold shadow-md">CodeIgniter Admin Panel</span>
+                            </div>
+                        </div>
+
+                        <!-- Content Details -->
+                        <div class="lg:col-span-5 p-6 lg:p-8 flex flex-col justify-between">
+                            <div>
+                                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-mono mb-3">
+                                    <i class="fa-solid fa-diagram-project"></i> Hybrid System Architecture
+                                </div>
+                                <h3 class="text-2xl font-extrabold text-white mb-3">SEO Content Hero — Order & Writer Workflow Platform</h3>
+                                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                                    Architected a multi-tier article writing platform combining a <strong>WordPress WooCommerce storefront</strong> with a custom <strong>CodeIgniter Order Processing & Writer Allocation Engine</strong>:
+                                </p>
+                                <ul class="list-disc list-inside text-xs text-slate-300 space-y-1.5 mb-6">
+                                    <li><strong>Order Placement</strong>: Customers purchase article writing packages via WooCommerce checkout.</li>
+                                    <li><strong>Task Division</strong>: WooCommerce orders sync to the CodeIgniter admin panel, automatically splitting multi-page orders into individual article assignments.</li>
+                                    <li><strong>Multi-Role Workflow</strong>: Admin assigns tasks to <strong>Writers &rarr; Editors &rarr; Quality Assurance (CopyScape integration)</strong>.</li>
+                                    <li><strong>Automated Delivery</strong>: Completed & approved articles auto-sync back to the customer's WordPress dashboard for instant download.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-indigo-300 text-xs font-mono border border-slate-700">WordPress</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-indigo-300 text-xs font-mono border border-slate-700">WooCommerce</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-indigo-300 text-xs font-mono border border-slate-700">CodeIgniter</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-indigo-300 text-xs font-mono border border-slate-700">PHP & MySQL</span>
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-semibold pt-3 border-t border-slate-800">
+                                    <span class="text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Live Production Platform</span>
+                                    <a href="#contact" class="text-indigo-400 hover:text-indigo-300 hover:underline">Discuss Custom Workflows &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REAL PROJECT 4: Everyday Kitchen Storage Accessories (WooCommerce) -->
+                <div class="project-card group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all md:col-span-2 lg:col-span-2" data-category="wordpress">
+                    <div class="grid lg:grid-cols-12 items-center bg-slate-900">
+                        <!-- Image screenshot thumbnail -->
+                        <div class="lg:col-span-7 h-64 lg:h-80 overflow-hidden relative group">
+                            <img src="assets/images/everyday-kitchen-full.png" alt="Everyday Kitchen Storage Accessories WooCommerce Website" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+                            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-sky-500/90 text-white text-xs font-mono font-bold shadow-lg">Catalog Showcase</span>
+                        </div>
+                        <!-- Details -->
+                        <div class="lg:col-span-5 p-6 lg:p-8 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-1">Maruti Interior Products Limited</div>
+                                <h3 class="text-2xl font-extrabold text-white mb-3">Everyday — Kitchen Storage Accessories</h3>
+                                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                                    Custom WordPress & WooCommerce product catalog portal engineered for Maruti Interior Products Ltd (Everyday Kitchen Storage). Developed custom expandable product accordions (Vertical Storage, Corner Storage, Drawer Pullouts, Wire Base), integrated multi-branch corporate contact routing (India & Australia), custom inquiry forms, and mobile responsive product showcases.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-sky-300 text-xs font-mono border border-slate-700">WordPress</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-sky-300 text-xs font-mono border border-slate-700">WooCommerce</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-sky-300 text-xs font-mono border border-slate-700">Custom Theme</span>
+                                    <span class="px-2.5 py-1 rounded bg-slate-800 text-sky-300 text-xs font-mono border border-slate-700">PHP & MySQL</span>
+                                </div>
+                                <div class="flex items-center justify-between text-xs font-semibold pt-3 border-t border-slate-800">
+                                    <span class="text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> E-Commerce Catalog Live</span>
+                                    <a href="#contact" class="text-indigo-400 hover:text-indigo-300 hover:underline">Details &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REAL PROJECT 4 SUB-CARD: Products View Screenshot -->
+                <div class="project-card group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all" data-category="wordpress">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="assets/images/everyday-products.png" alt="Everyday Products Accordion View" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-slate-900/80 backdrop-blur text-sky-300 text-xs font-mono border border-sky-500/30">Catalog View</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Dynamic Product Accordions</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                            Engineered dynamic accordions for product grouping including Solid Base, Wire Base, Shoe Racks, and Custom Hardware Accessories.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-mono">WooCommerce</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-mono">AJAX Filter</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs font-semibold pt-3 border-t border-slate-100 dark:border-slate-800">
+                            <span class="text-emerald-500 flex items-center gap-1"><i class="fa-solid fa-mobile-screen"></i> Responsive UI</span>
+                            <a href="#contact" class="text-indigo-600 dark:text-indigo-400 hover:underline">Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Get In Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mt-2">Let's Connect</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed mt-4">
+                    Looking for a Senior PHP & Node.js Developer for enterprise platforms, field GPS tracking CRMs, Laravel, CodeIgniter, WordPress, WooCommerce, or AWS Cloud architecture? Feel free to reach out directly!
+                </p>
+            </div>
+
+            <!-- Contact Cards Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                
+                <!-- Email Card -->
+                <a href="mailto:maksudbelim143@gmail.com" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Email Address</div>
+                    <div class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 transition-colors break-all">maksudbelim143@gmail.com</div>
+                </a>
+
+                <!-- Phone / WhatsApp Card -->
+                <a href="tel:+919409526165" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Phone / WhatsApp</div>
+                    <div class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">+91 94095 26165</div>
+                </a>
+
+                <!-- LinkedIn Card -->
+                <a href="https://www.linkedin.com/in/maksud-belim-b581a2112" target="_blank" rel="noopener" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-50 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">LinkedIn Profile</div>
+                    <div class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-sky-600 transition-colors">maksud-belim-b581a2112</div>
+                </a>
+
+                <!-- GitHub Card -->
+                <a href="https://github.com/muhammadmaksud3774" target="_blank" rel="noopener" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all group flex flex-col items-center text-center">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">GitHub Profile</div>
+                    <div class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-purple-600 transition-colors">muhammadmaksud3774</div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-200 dark:border-slate-800/80 bg-white dark:bg-slate-950 text-xs text-slate-500 text-center">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                &copy; <span id="year"></span> Maksud Belim. All rights reserved.
+            </div>
+            <div class="flex items-center gap-6 text-slate-400">
+                <a href="https://github.com/muhammadmaksud3774" target="_blank" rel="noopener" class="hover:text-indigo-600"><i class="fa-brands fa-github text-base"></i></a>
+                <a href="https://www.linkedin.com/in/maksud-belim-b581a2112" target="_blank" rel="noopener" class="hover:text-indigo-600"><i class="fa-brands fa-linkedin text-base"></i></a>
+                <a href="#hero" class="hover:text-indigo-600">Back to top &uarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
